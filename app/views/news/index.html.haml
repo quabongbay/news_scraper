@@ -1,0 +1,12 @@
+%div.news_list
+  %h1 News Scraper, page #{get_page_number(@more_link)}
+
+  - @news.each do |news|
+    %div.news_card
+      - image_link = news.image.present? ? news.image : "broccoli.jpeg"
+      .image=link_to(image_tag(image_link, size: "100x100"), news.link)
+      .content
+        .title= link_to(news.title, news.link)
+        .excerpt= news.excerpt
+
+  =link_to "More", news_index_path(page: @more_link), class: "button"

@@ -1,0 +1,176 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+@media (min-width: 1281px) {
+
+  .news_list {
+    padding: 100px;
+  }
+
+  .new_card {
+    height: 160px;
+  }
+}
+
+/*
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+  .news_list {
+    padding: 100px;
+  }
+
+  .new_card {
+    height: 160px;
+  }
+
+}
+
+/*
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .news_list {
+    padding: 50px;
+  }
+
+  .new_card {
+    height: 140px;
+  }
+}
+
+/*
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+  .news_list {
+    padding: 30px;
+  }
+
+  .new_card {
+    height: 140px;
+  }
+}
+
+/*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+  .news_list {
+    padding: 20px;
+  }
+
+  .new_card {
+    height: 140px;
+  }
+
+}
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+  .news_list {
+    padding: 10px;
+  }
+
+  .new_card {
+    height: 140px;
+  }
+
+}
+
+.news_list {
+  width: 100%;
+}
+
+.news_card {
+  margin-bottom: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  background: #f1f5fb;
+}
+
+.image {
+  margin-right: 15px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 115px);
+}
+
+.title {
+  margin-bottom: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+}
+
+.title a {
+  text-decoration: none;
+  color: #3273dc;
+}
+
+.excerpt {
+  width: 100%;
+  text-align: justify;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+a.button {
+	display: inline-block;
+	padding: 0.7em 1.7em;
+	margin: 0 0.3em 0.3em 0;
+	border-radius: 0.2em;
+	box-sizing: border-box;
+	text-decoration: none;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	color: #FFFFFF;
+	background-color: #3369ff;
+	box-shadow: inset 0 -0.6em 1em -0.35em rgba(0, 0, 0, 0.17), inset 0 0.6em 2em -0.3em rgba(255, 255, 255, 0.15), inset 0 0 0em 0.05em rgba(255, 255, 255, 0.12);
+	text-align: center;
+	position: relative;
+}
+
+a.button:active {
+	box-shadow: inset 0 0.6em 2em -0.3em rgba(0, 0, 0, 0.15), inset 0 0 0em 0.05em rgba(255, 255, 255, 0.12);
+}
+
+@media all and (max-width:30em) {
+	a.button {
+		display: block;
+		margin: 0.4em auto;
+	}
+}
